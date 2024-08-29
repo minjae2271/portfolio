@@ -5,6 +5,7 @@ import Providers from "@/components/providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import { cn } from "@/lib/utils";
+import SessionProvider from "@/components/session-provider";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-sans' });
 const Playfair = Playfair_Display({
@@ -34,6 +35,7 @@ export default function RootLayout({
           <main className="grow">{children}</main>
           <Footer />
         </Providers>
+        <SessionProvider />
         </body>
     </html>
   );

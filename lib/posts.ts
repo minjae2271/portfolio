@@ -53,5 +53,5 @@ export function getPostMetaData(filepath: string): MetaData {
     const filePath = path.join(rootDirectory, filepath)
     const fileContent = fs.readFileSync(filePath, { encoding: 'utf-8'})
     const { data } = matter(fileContent)
-    return { ... data, slug }
+    return { ...data, slug }
 }
