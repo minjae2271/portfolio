@@ -5,7 +5,7 @@ export default function LoginButton() {
     return (
         <Link href='/auth'>
             <Button
-            size='lg'
+            size='sm'
             variant='ghost'
             >
                 Login

@@ -1,10 +1,9 @@
 'use client'
 
 import { Auth } from '@supabase/auth-ui-react'
-import { createClient } from '@/lib/client/supabase'
 import { ThemeSupa } from '@supabase/auth-ui-shared'
 import useHydrate from '@/hooks/useHydrate'
-import { useEffect, useState } from 'react'
+import { createClient } from '@/lib/client/supabase'
 
 export default function AuthUI() {
   const supabase = createClient()

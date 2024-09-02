@@ -8,7 +8,7 @@ type Props = {
 
 export default function Projects({ projects }: Props) {
   return (
-    <div className='grid grid-cols-3 gap-4'>
+    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4'>
       {projects.map(project => (
         <div className='flex flex-col items-center justify-center' key={project.slug}>
             <Link className='overflow-hidden rounded-2xl' href={project.url as string} key={project.slug}>
@@ -20,8 +20,8 @@ export default function Projects({ projects }: Props) {
                   className='transition-transform duration-500 ease-in-out hover:scale-110 object-cover'
                 />
             </Link>
-            <span className='mt-1 text-lg'>{project.title}</span>
-            <span className='text-sm font-light text-muted-foreground'>{project.summary}</span>
+            <span className='mt-1 text-lg line-clamp-1'>{project.title}</span>
+            <span className='text-sm font-light text-muted-foreground line-clamp-1'>{project.summary}</span>
 
         </div>
         ))}

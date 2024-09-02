@@ -15,7 +15,7 @@ export default function LogoutButton() {
 
     return (
             <Button
-            size='lg'
+            size='sm'
             variant='ghost'
             onClick={onClickLogout}
             >
