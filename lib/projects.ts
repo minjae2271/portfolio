@@ -1,3 +1,4 @@
+import { metadata } from '@/app/layout'
 import { readFileSync } from 'fs'
 import fs from 'fs'
 import matter from 'gray-matter'
@@ -19,7 +20,22 @@ export type ProjectMetaData = {
 
 const rootDirectory = path.join(process.cwd(), 'content', 'projects')
 
-export function getProjects(): ProjectMetaData[] {
+export async function getProjectBySlug(slug: string): Promise<Project | null> {
+  const filePath = path.join(rootDirectory, `${slug}.mdx`) 
+  const project = fs.readFileSync(filePath, { encoding: 'utf-8' })
+
+  const { data, content } = matter(project)
+
+  console.log('projectbyslug', data)
+  console.log('projectbyslug', content)
+
+  return {
+    metadata: { ...data, slug }, content
+  }
+  
+}
+
+export function getProjects(limit?: number): ProjectMetaData[] {
   const files = fs.readdirSync(rootDirectory)
 
   const projects = files
@@ -32,6 +48,10 @@ export function getProjects(): ProjectMetaData[] {
         return -1
       }
     })
+
+    if (limit) {
+      return projects.slice(0, limit)
+    }
     return projects
 }
 
@@ -45,3 +65,5 @@ export function getProjectMetaData(filepath: string): ProjectMetaData {
 
   return { ...data, slug }
 }
+
+

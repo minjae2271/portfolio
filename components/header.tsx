@@ -19,14 +19,14 @@ export default function Header() {
                     </Link>
                 </div>
                 <ul className="flex flex-1 justify-center items-center gap-4 text-sm font-light text-muted-foreground sm:gap-10">
-                    <li className="transition-colors hover:text-foreground">
-                        <Link href='/posts'>Posts</Link>
+                    <li className="transition-colors hover:text-foreground text-center">
+                        <Link href='/about'>About me</Link>
                     </li>
                     <li className="transition-colors hover:text-foreground">
                         <Link href='/projects'>Projects</Link>
                     </li>
                     <li className="transition-colors hover:text-foreground">
-                        <Link href='/clone'>Clone</Link>
+                        <Link href='/posts'>Posts</Link>
                     </li>
                 </ul>
                 <div className="flex gap-x-1 items-center">

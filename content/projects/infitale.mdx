@@ -3,53 +3,25 @@
   summary: AI Children Book Generator
   image: /images/projects/totoro.png
   url: 'https://www.naver.com'
-  publishedAt: '2024-08-17'
+  publishedAt: '2024-07-07'
 ---
 
-This is a full-stack ecommerce store built with NextJs and Stripe. It uses the
-`@stripe/stripe-js` package to handle payments and the `@next/bundle-analyzer`
-package to analyze the bundle size.
+This is a AI children book generator built with NextJs and OpenAI API. It uses the
+`@langchain/openai` package to handle connection to AI model and the `@ChatOpenAI`
+library to set templates for messages sent to AI model and response from it.
 
 ## Features
 
-- **Stripe Payments**: Accept payments using the Stripe API.
-- **Product Catalog**: Display products in a grid layout.
-- **Shopping Cart**: Add products to the shopping cart and checkout.
+- **Generating story**: Accept keywords and send request to OpenAI.
+- **Choosing keywords**: Display keywords in a flex layout.
+- **Image generating**: Add Image to each chapter only when the user visits chapter for the first time.
 - **User Authentication**: Allow users to sign up and log in.
-- **Order History**: View order history and track shipments.
 
 ## Technologies
 
-- **NextJs**: A React framework for building static and dynamic websites.
-- **Stripe**: A payment processing platform for online businesses.
-- **Tailwind CSS**: A utility-first CSS framework for building custom designs.
-- **Vercel**: A cloud platform for static sites and serverless functions.
+<SkillsList skills={['NextJs', 'TypeScript', 'Recoil', 'Langchain']} />
 
-## Getting Started
-
-To get started with this project, you can clone the repository and install the
-dependencies:
-
-```bash
-git clone
-cd ecommerce-store
-npm install
-```
-
-Once the dependencies are installed, you can run the development server:
-
-```bash
-npm run dev
-```
-
-The development server will start at `http://localhost:3000`.
-
-## Deployment
-
-To deploy this project, you can use Vercel. You can link your GitHub repository
-to Vercel and deploy the project with a single click.
-
-## Conclusion
+## What I Learned
 
 This ecommerce store is a great example of how you can build a full-stack
 application with NextJs and Stripe. By integrating the Stripe API with NextJs,

@@ -2,7 +2,7 @@ import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import { JSX } from "react";
 import { highlight } from "sugar-high";
 
-import  Counter from '@/components/counter'
+import SkillsList from "./SkillsList";
 
 function Code({ children, ...props}: any) {
     let codeHTML = highlight(children)
@@ -11,7 +11,7 @@ function Code({ children, ...props}: any) {
 
 const components = {
     code: Code,
-    Counter
+    SkillsList
 }
 
 export default function MDXContent(props: JSX.IntrinsicAttributes & MDXRemoteProps) {

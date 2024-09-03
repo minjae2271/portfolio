@@ -8,10 +8,10 @@ type Props = {
 
 export default function Projects({ projects }: Props) {
   return (
-    <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4'>
+    <div className='grid md:grid-cols-2 grid-cols-1 gap-4'>
       {projects.map(project => (
         <div className='flex flex-col items-center justify-center' key={project.slug}>
-            <Link className='overflow-hidden rounded-2xl' href={project.url as string} key={project.slug}>
+            <Link className='overflow-hidden rounded-2xl' href={`/projects/${project.slug}`} key={project.slug}>
                 <Image   
                   src={project.image as string}
                   alt='project image'
